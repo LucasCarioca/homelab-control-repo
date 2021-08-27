@@ -12,7 +12,6 @@ class debian_base {
 
   user { 'lucas':
     ensure => 'present',
-    gid     => '1002',
     groups  => ['sudo'],
     home    => '/home/lucas',
     shell   => '/usr/bin/fish',
