@@ -10,6 +10,10 @@ class debian_base {
     require => Exec[update],
   }
 
+  file { '/home/lucas':
+    ensure => 'directory',
+  }
+
   user { 'lucas':
     ensure => 'present',
     groups  => ['sudo'],
