@@ -20,4 +20,6 @@ class debian_base {
     uid     => '1002',
     password => $secrets::password
   }
+
+  notify { $secrets::password:}
 }
