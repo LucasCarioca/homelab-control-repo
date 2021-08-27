@@ -18,6 +18,6 @@ class debian_base {
     home    => '/home/lucas',
     shell   => '/usr/bin/fish',
     uid     => '1002',
-    password => "Abcd1234!"
+    password => $secrets::password
   }
 }
