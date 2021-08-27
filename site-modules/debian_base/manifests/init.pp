@@ -18,8 +18,7 @@ class debian_base {
     home    => '/home/lucas',
     shell   => '/usr/bin/fish',
     uid     => '1002',
-    password => $secrets::password
+    password => pw_hash($secrets::password, $secrets::hash, $secrets::salt)
   }
 
-  notify { $secrets::password:}
 }
