@@ -12,10 +12,10 @@ class debian_base {
 
   user { 'lucas':
     ensure => 'present',
-    gid     => '1001',
+    gid     => '1002',
     groups  => ['sudo'],
     home    => '/home/lucas',
     shell   => '/usr/bin/fish',
-    uid     => '1001',
+    uid     => '1002',
   }
 }
