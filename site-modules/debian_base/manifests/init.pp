@@ -1,4 +1,6 @@
 class debian_base {
+  include secrets
+
   exec { update:
     command => '/usr/bin/apt update && /usr/bin/apt upgrade -y'
   }
@@ -16,5 +18,6 @@ class debian_base {
     home    => '/home/lucas',
     shell   => '/usr/bin/fish',
     uid     => '1002',
+    password => $password
   }
 }
